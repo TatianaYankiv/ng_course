@@ -1,0 +1,8 @@
+<mat-slide-toggle (change)="onChange($event)" [checked]="showAsList" labelPosition="before">Show as list
+</mat-slide-toggle>
+<mat-slide-toggle (change)="onThemeChange($event)" [checked]="useDarkTheme" labelPosition="before">Use dark theme
+</mat-slide-toggle>
+
+<div class="container" [class.list-view]="showAsList">
+  <app-card *ngFor="let movie of movies" [myMovie]="movie"></app-card>
+</div>
